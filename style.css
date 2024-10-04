@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poopins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:rgb(240, 219, 226);
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+logo{
+    width: 140px;
+}
+nav ul li{
+     display: inline-block;
+     list-style: none;
+     margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 30px;
+    margin-top: 20px;
+
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/*-------------------about-----------*/
+#about{
+    padding: 800px 30px;
+    color: black;
+    background-color: gainsboro; /* You can set any color here */
+}
+
+#about{
+    padding: 80px 30px;
+    color: black; /*information in about*/
+}
+.row{
+    display: flex;
+    justify-content: none;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+
+}
+.about-col-1 img{
+    width: 80%;
+    border-radius: 30px;
+}
+.about-col-2{
+    flex-basis: 1000%;
+
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 500;
+    color: black;  /*About me heading*/
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+
+
+
+/*-----------------projects------------*/
+#Projects{
+    padding: 30px 0;
+}
+.Projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.Projects-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transform: background 0.5s, transform 0.5s;
+
+}
+.Projects-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.Projects-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.Projects-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/*-----------certificates--------*/
+#Certificates{
+    padding: 30px;
+    background-color: black;
+}
+
+  .Certificate-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+  .Certificates{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .Certificates img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  .layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+  }
+  .layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .Certificates:hover img{
+    transform: scale(1.1);
+  }
+  .Certificates:hover .layer{
+    height: 100%;
+  }
+
+  /*---------------------skills----------------*/
+ /* General Body Style */
+body {
+    background-color: #ddd; /* Set total background to white */
+    /* Professional and clean font */
+  }
+  
+  /* Skills Section */
+  #skills {
+    max-width: 2000px;
+    margin: 50px auto;
+    padding: 10pxpx;
+    background-color: #ddd;
+  }
+  
+  /* Skill Item Layout */
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Progress Bar Container */
+  .progress-bar-container {
+    flex-basis: 100%; /* The progress bar will take up exactly half the page */
+    background-color: rgb(245, 204, 204); /*bar background*/
+    border-radius: 10px;
+    height: 25px;
+    margin-right: 30px; /* Space between the bar and the skill name */
+  }
+  
+  /* Progress (Red Bar) */
+  .progress {
+    background-color: red; /* Red for percentage representation */
+    height: 100%;
+    color: #ddd;
+    text-align: center;
+    line-height: 25px; /* Vertically centers the text in the bar */
+    border-radius: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+  }
+  
+  /* Skill Name (Black Text) */
+  .skill-name {
+    flex-basis: 50%; /* Skill names take up half the page */
+    font-size: 20px; /* Increased font size for a more prominent look */
+    font-weight: bold; /* Makes the skill name stand out */
+    color: black; /* Black color for the skill names */
+    text-align: left; /* Align the text to the left */
+  }
+  .skills-heading{
+    color: black;
+    text-align: center;
+  }
+  .skill{
+    color: black;
+    flex-basis: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 30px;
+
+  }
+  
+  /*------------------------achievements------------------*/
+
+  /* Achievements Section */
+#achievements {
+    background-color: black; /* Black background */
+    color: #ddd; /* White text */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Achievements Title */
+  #achievements h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black; /* White title */
+  }
+  
+  /* Achievement List */
+  .achievement-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .achievement-list li {
+    font-size: 20px; /* Larger font size for readability */
+    margin-bottom: 20px; /* Space between achievements */
+    line-height: 1.5; /* Better readability */
+    color: white; /* White text for achievements */
+  }
+  
+  .achievement-heading{
+    padding: 0;
+    margin-left: 200px ;
+    border: #fff;
+    border-radius: 10px;
+  }
+  .achievement-list{
+    border-radius: 10px;
+  }
+.achievement-list{
+    display: #fff;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+}
+
+.achievement-heading{
+    margin-left: 350px;
+    color: black;
+}
